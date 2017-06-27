@@ -42,6 +42,34 @@ public class App {
           System.out.println( individualCD.mPrice );
         }
       }
+    } else if (userInput.equals("Price")) {
+      System.out.println("What is the highest price you are willing to spend?");
+      int userPrice = Integer.parseInt(myConsole.readLine());
+      System.out.println("Alright, here is a list of CD's in your price range:");
+      for ( CD individualCD : allCD ) {
+        if (individualCD.sortByPrice(userPrice)) {
+          System.out.println( "----------------------" );
+          System.out.println( individualCD.mArtist );
+          System.out.println( individualCD.mAlbum );
+          System.out.println( individualCD.mYear );
+          System.out.println( individualCD.mPrice );
+        }
+      }
+    } else if (userInput.equals("Artist")) {
+      System.out.println("What artist would you like to see?");
+      String userArtist = myConsole.readLine();
+      System.out.println("Here is what we have from that artist:");
+      for ( CD individualCD : allCD ) {
+        if (individualCD.sortByPrice(userPrice)) {
+          System.out.println( "----------------------" );
+          System.out.println( individualCD.mArtist );
+          System.out.println( individualCD.mAlbum );
+          System.out.println( individualCD.mYear );
+          System.out.println( individualCD.mPrice );
+        }
+      }
+    } else if (userInput.equals("Exit")) {
+      
     }
   }
 }

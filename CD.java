@@ -11,7 +11,16 @@ class CD {
     mYear = year;
     mPrice = price;
   }
-  public boolean lookingFor(int oldestYear){
+
+  public boolean sortByYear(int oldestYear){
     return (mYear >= oldestYear);
+  }
+
+  public boolean sortByPrice(int price) {
+    return (mPrice <= price);
+  }
+
+  public boolean sortByArtist(String name) {
+    return (name.equals(mArtist));
   }
 }
